@@ -2,6 +2,8 @@ class PetsController < ApplicationController
   def index
     @pets = Pet.all.order(:name)
 
-    render json: { ok: "Yes"}, status: :ok
+    render json: pets, status: :ok
+
+
   end
 end
